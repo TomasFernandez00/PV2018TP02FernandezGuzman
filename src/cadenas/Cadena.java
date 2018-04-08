@@ -13,11 +13,19 @@ import java.util.Scanner;
  */
 public class Cadena {
 	private String cadena;
-	public void ingresarCadena() {
+	public void ingresarCadena() throws ErrorNoIngresaCadena {
 	    	System.out.println("Ingrese la cadena");
 	    	Scanner in = new Scanner(System.in);
 	    	cadena = in.nextLine();
 		setCadena(cadena);
+		try {
+		if ("".equals(getCadena()))
+			throw new ErrorNoIngresaCadena("No ingreso cadena!");
+		}
+		catch(ErrorNoIngresaCadena e) {
+			System.out.println("Debe ingresar una cadena");
+			ingresarCadena();
+		}
 	}
  
 	public void contarVocales() {
