@@ -6,6 +6,7 @@
 package pv2018tp02fernandezguzman;
 
 import cadenas.Cadena;
+import cadenas.ErrorNoIngresaCadena;
 import invertidores.Invertidor;
 import static java.lang.System.exit;
 import java.util.Scanner;
@@ -16,7 +17,7 @@ import verificadores.Verificador;
  * @author Tomas Fernandez EdM
  */
 public class Punto01 {
-	public void mostrarMenu() {
+	public void mostrarMenu() throws ErrorNoIngresaCadena {
 		System.out.println("1: Mostrar la cantidad de vocales de la cadena");
 		System.out.println("2: Invertir la cadena y mostrarla por pantalla");
 		System.out.println("3: Dado un caracter verificar cuantas veces se repite en la cadena");
