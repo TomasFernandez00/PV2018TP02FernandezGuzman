@@ -4,7 +4,7 @@
  * Tomas Fernandez y Martin Guzman
  * https://github.com/TomasFernandez00/PV2018TP02FernandezGuzman
  */
-package vocales;
+package cadenas;
 
 import java.util.Scanner;
 
@@ -12,15 +12,16 @@ import java.util.Scanner;
  *
  * @author Tomas Fernandez Martin Guzman EdM
  */
-public class ContadorVocales {
+public class Cadena {
 
 	private String cadena;
+	private char Caracter;
 
 	public void ingresarCadena(){
 		System.out.println("Ingrese la cadena");
 		Scanner in = new Scanner(System.in);
-		cadena = in.nextLine();
-		setCadena(cadena);
+		setCadena(in.nextLine());
+		setCadena(getCadena());
 		try {
 			if ("".equals(getCadena())) {
 				throw new Exception();
@@ -29,6 +30,21 @@ public class ContadorVocales {
 			System.out.println("Debe ingresar la cadena!");
 			ingresarCadena();
 		}
+	}
+
+	public void ingresarCaracter() {
+		Scanner in = new Scanner(System.in);
+		System.out.println("Ingrese caracter");
+		setCaracter(in.next().charAt(0));
+		System.out.println(Character.getNumericValue(getCaracter()));
+//		try {			no hay forma de hacer andar esto, la linea anterior no se ejecuta hasta que no se pone un caracter, entonces nunca muestra mensaje de error
+//			if (Character.isWhitespace(getCaracter())){
+//				throw new Exception();
+//			}
+//		} catch (Exception ex) {
+//			System.out.println("Debe ingresar la cadena!");
+//			ingresarCaracter();
+//		}
 	}
 
 	public void contarVocales() {
@@ -71,6 +87,27 @@ public class ContadorVocales {
 		System.out.println("La cadena tiene " + cantidad + " vocales");
 	}
 
+	public void invertirCadena() {
+		String invertido = "";
+		int tope = getCadena().length();
+		for (int i = tope - 1; i >= 0; i--) {
+			invertido += getCadena().charAt(i);
+
+		}
+		System.out.println(invertido);
+	}
+
+	public void contarVecesQueSeRepiteCaracter() {
+		int tope = getCadena().length();
+		int contador = 0;
+		for (int i = 0; i < tope; i++) {
+			if (getCadena().charAt(i) == getCaracter()) {
+				contador++;
+			}
+		}
+		System.out.println("El caracter se repite " + contador + " veces");
+	}
+
 	public String getCadena() {
 		return cadena;
 	}
@@ -79,6 +116,14 @@ public class ContadorVocales {
 		this.cadena = cadena;
 	}
 
-	public ContadorVocales() {
+	public char getCaracter() {
+		return Caracter;
+	}
+
+	public void setCaracter(char Caracter) {
+		this.Caracter = Caracter;
+	}
+
+	public Cadena() {
 	}
 }

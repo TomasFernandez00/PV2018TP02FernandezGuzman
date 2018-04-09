@@ -6,11 +6,9 @@
  */
 package pv2018tp02fernandezguzman;
 
-import vocales.ContadorVocales;
-import invertidores.Invertidor;
+import cadenas.Cadena;
 import static java.lang.System.exit;
 import java.util.Scanner;
-import verificadores.Verificador;
 
 /**
  *
@@ -25,22 +23,20 @@ public class Punto01 {
 		System.out.println("4: Salir");
 		Scanner in = new Scanner(System.in);
 		int opt = in.nextInt();
+		Cadena unCadena = new Cadena();
 		switch (opt) {
 			case 1:
-				ContadorVocales unContadorVocales = new ContadorVocales();
-				unContadorVocales.ingresarCadena();
-				unContadorVocales.contarVocales();
+				unCadena.ingresarCadena();
+				unCadena.contarVocales();
 				mostrarMenu();
 			case 2:
-				Invertidor unInvertidor = new Invertidor();
-				unInvertidor.ingresarCadena();
-				unInvertidor.invertir();
+				unCadena.ingresarCadena();
+				unCadena.invertirCadena();	
 				mostrarMenu();
 			case 3:
-				Verificador unVerificador = new Verificador();
-				unVerificador.ingresarCadena();
-				unVerificador.ingresarCaracter();
-				unVerificador.contarCadena();
+				unCadena.ingresarCadena();
+				unCadena.ingresarCaracter();
+				unCadena.contarVecesQueSeRepiteCaracter();
 				mostrarMenu();
 			case 4:
 				exit(0);
