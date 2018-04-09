@@ -6,7 +6,6 @@
  */
 package pv2018tp02fernandezguzman;
 
-import cadenas.ErrorNoIngresaCadena;
 import static java.lang.System.exit;
 import java.util.Scanner;
 
@@ -16,11 +15,11 @@ import java.util.Scanner;
  */
 public class PV2018TP02FernandezGuzman {
 
-	public static void main(String[] args) throws ErrorNoIngresaCadena {
+	public static void main(String[] args) {
 		mostrarMenu();
 	}
 
-	public static void mostrarMenu() throws ErrorNoIngresaCadena {
+	public static void mostrarMenu() {
 		System.out.println("1: Punto 1");
 		System.out.println("2: Punto 2");
 		System.out.println("3: Punto 3");

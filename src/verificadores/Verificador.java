@@ -17,16 +17,32 @@ public class Verificador {
 	private String cadena;
 	private char caracter;
 
-	public void conseguirCadena() {
+	public void ingresarCadena() {
 		Scanner in = new Scanner(System.in);
 		System.out.println("Ingrese cadena");
 		setCadena(in.nextLine());
+		try {
+			if ("".equals(getCadena())) {
+				throw new Exception();
+			}
+		} catch (Exception ex) {
+			System.out.println("Debe ingresar la cadena!");
+			ingresarCadena();
+		}
 	}
 
-	public void conseguirChar() {
+	public void ingresarCaracter() {
 		Scanner in = new Scanner(System.in);
 		System.out.println("Ingrese caracter");
 		setCaracter(in.next().charAt(0));
+		try {
+			if (Character.isWhitespace(getCaracter())){
+				throw new Exception();
+			}
+		} catch (Exception ex) {
+			System.out.println("Debe ingresar la cadena!");
+			ingresarCaracter();
+		}
 	}
 
 	public void contarCadena() {

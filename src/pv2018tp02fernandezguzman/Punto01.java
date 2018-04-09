@@ -6,8 +6,7 @@
  */
 package pv2018tp02fernandezguzman;
 
-import cadenas.Cadena;
-import cadenas.ErrorNoIngresaCadena;
+import vocales.ContadorVocales;
 import invertidores.Invertidor;
 import static java.lang.System.exit;
 import java.util.Scanner;
@@ -19,7 +18,7 @@ import verificadores.Verificador;
  */
 public class Punto01 {
 
-	public void mostrarMenu() throws ErrorNoIngresaCadena {
+	public void mostrarMenu() {
 		System.out.println("1: Mostrar la cantidad de vocales de la cadena");
 		System.out.println("2: Invertir la cadena y mostrarla por pantalla");
 		System.out.println("3: Dado un caracter verificar cuantas veces se repite en la cadena");
@@ -28,19 +27,19 @@ public class Punto01 {
 		int opt = in.nextInt();
 		switch (opt) {
 			case 1:
-				Cadena unCadena = new Cadena();
-				unCadena.ingresarCadena();
-				unCadena.contarVocales();
+				ContadorVocales unContadorVocales = new ContadorVocales();
+				unContadorVocales.ingresarCadena();
+				unContadorVocales.contarVocales();
 				mostrarMenu();
 			case 2:
 				Invertidor unInvertidor = new Invertidor();
-				unInvertidor.conseguirCadena();
+				unInvertidor.ingresarCadena();
 				unInvertidor.invertir();
 				mostrarMenu();
 			case 3:
 				Verificador unVerificador = new Verificador();
-				unVerificador.conseguirCadena();
-				unVerificador.conseguirChar();
+				unVerificador.ingresarCadena();
+				unVerificador.ingresarCaracter();
 				unVerificador.contarCadena();
 				mostrarMenu();
 			case 4:

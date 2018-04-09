@@ -4,7 +4,7 @@
  * Tomas Fernandez y Martin Guzman
  * https://github.com/TomasFernandez00/PV2018TP02FernandezGuzman
  */
-package cadenas;
+package vocales;
 
 import java.util.Scanner;
 
@@ -12,21 +12,21 @@ import java.util.Scanner;
  *
  * @author Tomas Fernandez Martin Guzman EdM
  */
-public class Cadena {
+public class ContadorVocales {
 
 	private String cadena;
 
-	public void ingresarCadena() throws ErrorNoIngresaCadena {
+	public void ingresarCadena(){
 		System.out.println("Ingrese la cadena");
 		Scanner in = new Scanner(System.in);
 		cadena = in.nextLine();
 		setCadena(cadena);
 		try {
 			if ("".equals(getCadena())) {
-				throw new ErrorNoIngresaCadena("No ingreso cadena!");
+				throw new Exception();
 			}
-		} catch (ErrorNoIngresaCadena e) {
-			System.out.println("Debe ingresar una cadena");
+		} catch (Exception ex) {
+			System.out.println("Debe ingresar la cadena!");
 			ingresarCadena();
 		}
 	}
@@ -79,6 +79,6 @@ public class Cadena {
 		this.cadena = cadena;
 	}
 
-	public Cadena() {
+	public ContadorVocales() {
 	}
 }

@@ -16,11 +16,19 @@ public class Invertidor {
 
 	private String cadena;
 
-	public void conseguirCadena() {
+	public void ingresarCadena() {
 		System.out.println("Ingrese la cadena");
 		Scanner in = new Scanner(System.in);
 		cadena = in.nextLine();
 		setCadena(cadena);
+		try {
+			if ("".equals(getCadena())) {
+				throw new Exception();
+			}
+		} catch (Exception ex) {
+			System.out.println("Debe ingresar la cadena!");
+			ingresarCadena();
+		}
 	}
 
 	public void invertir() {
