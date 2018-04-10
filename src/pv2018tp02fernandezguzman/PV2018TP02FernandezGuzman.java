@@ -32,6 +32,8 @@ public class PV2018TP02FernandezGuzman {
 				unPunto01.mostrarMenu();
 				main(null);
 			case 2:
+				Punto02 unPunto02 = new Punto02();
+				unPunto02.mostrarMenu();
 				main(null);
 			case 3:
 				main(null);

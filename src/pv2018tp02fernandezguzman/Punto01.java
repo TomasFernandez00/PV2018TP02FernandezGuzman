@@ -31,7 +31,7 @@ public class Punto01 {
 				mostrarMenu();
 			case 2:
 				unCadena.ingresarCadena();
-				unCadena.invertirCadena();	
+				unCadena.invertirCadena();
 				mostrarMenu();
 			case 3:
 				unCadena.ingresarCadena();

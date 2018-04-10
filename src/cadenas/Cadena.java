@@ -17,7 +17,7 @@ public class Cadena {
 	private String cadena;
 	private char Caracter;
 
-	public void ingresarCadena(){
+	public void ingresarCadena() {
 		System.out.println("Ingrese la cadena");
 		Scanner in = new Scanner(System.in);
 		setCadena(in.nextLine());
@@ -36,7 +36,6 @@ public class Cadena {
 		Scanner in = new Scanner(System.in);
 		System.out.println("Ingrese caracter");
 		setCaracter(in.next().charAt(0));
-		System.out.println(Character.getNumericValue(getCaracter()));
 //		try {			no hay forma de hacer andar esto, la linea anterior no se ejecuta hasta que no se pone un caracter, entonces nunca muestra mensaje de error
 //			if (Character.isWhitespace(getCaracter())){
 //				throw new Exception();
