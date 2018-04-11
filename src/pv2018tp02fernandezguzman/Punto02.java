@@ -17,7 +17,7 @@ public class Punto02 {
 
 	public void mostrarMenu() {
 		System.out.println("1: Contar la cantidad de semanas de una persona");
-		System.out.println("2: ");
+		System.out.println("2: Determinar la estacion de una fecha");
 		System.out.println("3: ");
 		System.out.println("4: Salir");
 		Scanner in = new Scanner(System.in);
@@ -25,9 +25,12 @@ public class Punto02 {
 		Fecha unFecha = new Fecha();
 		switch (opt) {
 			case 1:
-				System.out.println(unFecha.devolverFechaEnSemanas());
+				unFecha.ingresarFecha();
+				System.out.println(unFecha.devolverFechaEnSemanas(unFecha.getfechaIn()));
 				mostrarMenu();
 			case 2:
+				unFecha.ingresarFecha();
+				System.out.println(unFecha.obtenerEstacion(unFecha.getfechaIn()));
 				mostrarMenu();
 			case 3:
 				mostrarMenu();
