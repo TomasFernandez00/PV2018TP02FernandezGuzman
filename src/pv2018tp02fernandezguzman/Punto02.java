@@ -8,6 +8,7 @@ package pv2018tp02fernandezguzman;
 import fechas.Fecha;
 import static java.lang.System.exit;
 import java.util.Scanner;
+import static pv2018tp02fernandezguzman.PV2018TP02FernandezGuzman.main;
 
 /**
  *
