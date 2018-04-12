@@ -170,5 +170,6 @@ public class Fecha {
     public void setFechaIn2(String fechaIn2) {
         this.fechaIn2 = fechaIn2;
     }
+    
 
 }
