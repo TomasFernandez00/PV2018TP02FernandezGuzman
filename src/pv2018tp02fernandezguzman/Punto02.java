@@ -18,21 +18,26 @@ public class Punto02 {
 	public void mostrarMenu() {
 		System.out.println("1: Contar la cantidad de semanas de una persona");
 		System.out.println("2: Determinar la estacion de una fecha");
-		System.out.println("3: ");
+		System.out.println("3: Contar Cantidad de domingos entre dos fechas");
 		System.out.println("4: Salir");
 		Scanner in = new Scanner(System.in);
 		int opt = in.nextInt();
 		Fecha unFecha = new Fecha();
 		switch (opt) {
 			case 1:
-				unFecha.ingresarFecha();
+				unFecha.ingresarFecha("Ingrese la fecha de Nacimiento en formato dd/MM/yyyy");
 				System.out.println(unFecha.devolverFechaEnSemanas(unFecha.getfechaIn()));
 				mostrarMenu();
 			case 2:
-				unFecha.ingresarFecha();
+				unFecha.ingresarFecha("Ingrese la fecha para obtener estacion en formato dd/MM/yyyy");
 				System.out.println(unFecha.obtenerEstacion(unFecha.getfechaIn()));
 				mostrarMenu();
 			case 3:
+                                
+                                unFecha.ingresarFecha("Ingrese la fecha mayor en formato dd/MM/yyyy: ");
+                                unFecha.ingresarFecha2("Ingrese la fecha menor en formato dd/MM/yyyy: ");
+                                long a=unFecha.cantidadDomingos()+1;
+                                System.out.println("La cantidad de domingos entre las fechas es de: "+a);
 				mostrarMenu();
 			case 4:
 				exit(0);

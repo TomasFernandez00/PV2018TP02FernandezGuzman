@@ -20,18 +20,26 @@ import static pv2018tp02fernandezguzman.PV2018TP02FernandezGuzman.main;
 public class Fecha {
 
 	private String fechaIn;
+        private String fechaIn2;
 
 	public Date crearFecha() {
 		Date hoy = new Date();
 		return hoy;
 	}
 	
-	public void ingresarFecha() {
+	public void ingresarFecha(String msg) {
 		Scanner fe = new Scanner(System.in);
-		System.out.println("Ingrese fecha en formato dd/mm/yyyy: ");
+		System.out.println(msg);
 		setfechaIn(fe.nextLine());
 	}
 
+        public void ingresarFecha2(String msg1) {
+		Scanner fe = new Scanner(System.in);
+		System.out.println(msg1);
+		setFechaIn2(fe.nextLine());
+	}
+
+        
 	public long devolverFechaEnSemanas(String fechaNac) {
 		Date fechaCambiada = cortarFecha(fechaNac);
 		Date fechaHoy = crearFecha();
@@ -106,4 +114,25 @@ public class Fecha {
 
 	public Fecha() {
 	}
+        
+        public long cantidadDomingos(){
+           long result=devolverFechaEnSemanas(getFechaIn2()) - devolverFechaEnSemanas(getfechaIn());
+           return result;
+        }
+
+    /**
+     * @return the fechaIn2
+     */
+    public String getFechaIn2() {
+        return fechaIn2;
+    }
+
+    /**
+     * @param fechaIn2 the fechaIn2 to set
+     */
+    public void setFechaIn2(String fechaIn2) {
+        this.fechaIn2 = fechaIn2;
+    }
+        
+        
 }
