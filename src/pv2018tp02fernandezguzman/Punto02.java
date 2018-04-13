@@ -8,7 +8,6 @@ package pv2018tp02fernandezguzman;
 import fechas.Fecha;
 import static java.lang.System.exit;
 import java.util.Scanner;
-import static pv2018tp02fernandezguzman.PV2018TP02FernandezGuzman.main;
 
 /**
  *
@@ -28,24 +27,24 @@ public class Punto02 {
 		switch (opt) {
 			case 1:
 				unFecha.ingresarFecha("Ingrese la fecha de Nacimiento en formato dd/MM/yyyy");
-				System.out.println(unFecha.devolverFechaEnSemanas(unFecha.getfechaIn()));
+				System.out.println(unFecha.calcularSemanasDesdeNacimiento(unFecha.getfechaIn()));
 				mostrarMenu();
 			case 2:
 				unFecha.ingresarFecha("Ingrese la fecha para obtener estacion en formato dd/MM/yyyy");
 				System.out.println(unFecha.obtenerEstacion(unFecha.getfechaIn()));
 				mostrarMenu();
 			case 3:
-                                
-                                unFecha.ingresarFecha("Ingrese la fecha mayor en formato dd/MM/yyyy: ");
-                                unFecha.ingresarFecha2("Ingrese la fecha menor en formato dd/MM/yyyy: ");
-                                long a=unFecha.cantidadDomingos()+1;
-                                System.out.println("La cantidad de domingos entre las fechas es de: "+a);
+
+				unFecha.ingresarFecha("Ingrese la fecha menor en formato dd/MM/yyyy: ");
+				unFecha.ingresarFecha2("Ingrese la fecha mayor en formato dd/MM/yyyy: ");
+				System.out.println("La cantidad de domingos entre las fechas es de: " + unFecha.cantidadDomingos());
 				mostrarMenu();
 			case 4:
-                                unFecha.ingresarFecha("Ingrese la fecha mayor en formato dd/MM/yyyy: ");
-                                unFecha.ingresarFecha2("Ingrese la fecha menor en formato dd/MM/yyyy: ");
-                                System.out.println(unFecha.cantidadDias());
-                        case 5:  
+				unFecha.ingresarFecha("Ingrese la fecha mayor en formato dd/MM/yyyy: ");
+				unFecha.ingresarFecha2("Ingrese la fecha menor en formato dd/MM/yyyy: ");
+				System.out.println(unFecha.cantidadDias());
+				mostrarMenu();
+			case 5:
 				exit(0);
 		}
 	}

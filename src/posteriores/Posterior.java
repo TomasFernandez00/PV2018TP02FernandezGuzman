@@ -9,71 +9,49 @@ import java.util.Scanner;
 
 /**
  *
- * @author Elena
+ * @author Fernandez Guzman
  */
 public class Posterior {
-    private int dia;
-    private int mes;
-    private int año;
 
-    
-    public void ingresarFecha(){
-        Scanner nu=new Scanner(System.in);
-        System.out.println("Ingrese los dias: ");
-        setDia(nu.nextInt());
-        System.out.println("Ingrese los meses: ");
-        setMes(nu.nextInt());
-        System.out.println("Ingrese el año: ");
-        setAño(nu.nextInt());
-        
-    }
-    
-    
-    
-    /**
-     * @return the dia
-     */
-    public int getDia() {
-        return dia;
-    }
+	private int dia;
+	private int mes;
+	private int año;
 
-    /**
-     * @param dia the dia to set
-     */
-    public void setDia(int dia) {
-        this.dia = dia;
-    }
+	public void ingresarFecha() {
+		Scanner nu = new Scanner(System.in);
+		System.out.println("Ingrese los dias: ");
+		setDia(nu.nextInt());
+		System.out.println("Ingrese los meses: ");
+		setMes(nu.nextInt());
+		System.out.println("Ingrese el año: ");
+		setAño(nu.nextInt());
+	}
 
-    /**
-     * @return the mes
-     */
-    public int getMes() {
-        return mes;
-    }
+	public int getDia() {
+		return dia;
+	}
 
-    /**
-     * @param mes the mes to set
-     */
-    public void setMes(int mes) {
-        this.mes = mes;
-    }
+	public void setDia(int dia) {
+		this.dia = dia;
+	}
 
-    /**
-     * @return the año
-     */
-    public int getAño() {
-        return año;
-    }
+	public int getMes() {
+		return mes;
+	}
 
-    /**
-     * @param año the año to set
-     */
-    public void setAño(int año) {
-        this.año = año;
-    }
+	public void setMes(int mes) {
+		this.mes = mes;
+	}
 
-    public Posterior() {
-    }
-    
-    
+	public int getAño() {
+		return año;
+	}
+
+	public void setAño(int año) {
+		this.año = año;
+	}
+
+	public Posterior() {
+	}
+
 }

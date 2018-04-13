@@ -9,6 +9,6 @@ package pv2018tp02fernandezguzman;
  *
  * @author Elena
  */
-public class Punto3 {
-    
+public class Punto03 {
+
 }
