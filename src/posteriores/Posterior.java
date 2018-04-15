@@ -34,16 +34,17 @@ public class Posterior {
         setMes(nu.nextInt());
         System.out.println("Ingrese el año: ");
         setAño(nu.nextInt());
-        transFechaCal();
+        trans();
     }
-
-    public Calendar transFechaCal() {
-        Calendar cal = new GregorianCalendar(2018, Calendar.FEBRUARY, 22);
-        cal.add(Calendar.DAY_OF_MONTH, 100);
-        return cal;
+    
+    public Calendar trans(){
+        Calendar cal = new GregorianCalendar(2018, Calendar.FEBRUARY, 22,23,11,44);
+       return cal;
     }
-
-    /**
+    
+    
+    
+        /**
      * @return the dia
      */
     public int getDia() {
