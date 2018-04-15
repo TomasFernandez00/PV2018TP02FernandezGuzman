@@ -81,26 +81,19 @@ public class Posterior {
     public Date transFechaDate() {
         String fecha;
         Date fechaDevuelta = null;
-        fecha = getDia() + "/" + getMes() + "/" + getAño();
+        fecha = getDia() + "-" + getMes() + "-" + getAño();
         SimpleDateFormat formato = new SimpleDateFormat("EEEE MMMM d HH:mm:ss z yyyy");
         try {
             fechaDevuelta = formato.parse(fecha);
         } catch (ParseException e) {
-            System.out.println("Error");
+            System.out.println("Error" + e);
         }
         return fechaDevuelta;
     }
 
     public Calendar transFechaCal(Date date) {
-        Calendar cal = null;
-        try {
-            DateFormat format = new SimpleDateFormat("yyyyMMdd");
-            date = (Date) format.parse(date.toString());
-            cal = Calendar.getInstance();
-            cal.setTime(date);
-        } catch (ParseException e) {
-            System.out.println("Error");
-        }
+        Calendar cal = Calendar.getInstance();
+        cal.setTime(date);
         return cal;
     }
 
