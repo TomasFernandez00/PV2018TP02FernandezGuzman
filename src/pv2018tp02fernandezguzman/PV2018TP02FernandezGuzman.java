@@ -35,7 +35,7 @@ public class PV2018TP02FernandezGuzman {
 				Punto02 unPunto02 = new Punto02();
 				unPunto02.mostrarMenu();
 				main(null);
-			case 3:
+			case 3:    //NO realiza ninguna acción
 				main(null);
 			case 4:
 				exit(0);
